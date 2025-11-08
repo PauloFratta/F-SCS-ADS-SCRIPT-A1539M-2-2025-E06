@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+:root { /*Variáveis:*/
+    --cor-sombra: rgba(0, 0, 0, 0.5);
+    --cor-sombra-2: rgba(0, 0, 0, 0.9);
+    --preto: #222;
+    /*Verdes:*/ 
+    --menta: #E8F5E9; /*body e section*/
+    --cha: #C8E6C9; /*cartões e caixas*/
+    --folha-clara: #A5D6A7; /*citações ou luzes*/
+    --jardim: #81C784; /*botões segundários*/
+    --floresta: #66BB6A; /*botões primários*/
+    --pinho: #43A047; /*cabeçalhos*/
+    --selva: #388E3C; /*bordas e ícones*/
+    --musgo: #2E7D32; /*textos marcados ou com ênfase*/
+    --verde-escuro: #1B5E20; /*rodapé e navbar*/
+    /*Marrons:*/
+    --areia: #D7CCC8; /*fundo neutro*/
+    --taupe: #A1887F; /*destaques*/
+    --terra: #795548; /*títulos*/
+    --cafe: #5D4037; /*botões:hover e cabeçalhos*/
+    --madeira: #3E2723; /*rodapé e navbar   segundária*/
+    /*Brancos:*/
+    --branco: #F8F9F9; /*cor de texto - 1*/
+    --cinza-claro: #e8e8e8;
+    --branco-puro: #fff; /*cor de texto - 2*/
+    --branco-queimado: #fdf9f0; /*fundo de seções*/
+    --off-white: #F5F5F5; /*containers*/
+    --branco-gelo: #ECEFF1; /*divisórias*/
+}
+
+/*-- Ícone do whatsapp:*/
+.whatsapp {
+    width: 66px;
+    height: 66px;
+    background-color: var(--branco);
+    border-radius: 50%;
+    position: fixed;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f1f1f1;
+}
+
+.whatsapp a {
+    width: 60px;
+    height: 60px;
+    background: #15592e;
+    background: linear-gradient(45deg, rgba(21, 89, 46, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(37, 211, 102, 1) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp i {
+    color: #f1f1f1;
+    font-size: 200%;
+}
+
+/*-- Corpo:*/
+body {
+    background-color: var(--menta);
+}
+
+/*-- Cabeçalho:*/
+header {
+    background-color: var(--pinho);
+    width: 100%;
+    padding: 10px;
+    position: relative;
+}
+
+.logotipo {
+    width: 66px;
+    height: 66px;
+    position: absolute;
+    margin: 5px;
+    /*remover*/border: 1px dashed var(--preto);
+}
+
+.logotipo img {
+    width: 100%;
+}
+
+h1 {
+    color: var(--branco);
+    margin: 10px 0 10px 88px;
+}
+
+h2 {
+    color: var(--menta);
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+}

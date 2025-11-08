@@ -1,0 +1,370 @@
+@import url(./main.css); /* Conteúdo Reutilizável */
+
+/*-- Menu de Navegação:*/
+.navbar {
+    width: 100%;
+    background-color: var(--verde-escuro);
+    display: flex;
+    justify-content: center; /*Pode alterar para 'center' se preferir*/
+    padding: 1rem;
+    gap: 2rem;
+    position: sticky; /*Para deixar o menu nav "grudado" na tela*/
+    top: 0; /*Define que irá ficar grudado no topo*/
+    z-index: 10; /*Impede que outro elemento fique por cima do menu nav*/
+}
+
+.nav-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-link {
+    color: var(--branco);
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/*-- Nav: Menu Dropdown*/
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--cha);
+    padding: .5rem;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px);
+}
+
+/*-- Opções do menu dropdown*/
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+    background-color: var(--folha-clara);
+    font-weight: bold;
+}
+
+.dropdown-menu a {
+    color: var(--musgo);
+}
+
+/*-- Estilos do Conteúdo Principal do Site: --*/
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*-- Barra de Pesquisa:*/
+.searchBar {
+    margin: 5px 0;
+    background-color: transparent;
+}
+
+.searchBar form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barraBusca {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding: 0 8px;
+    margin-right: -5px;
+    border: 2px solid var(--selva);
+    background-color: var(--cinza-claro);
+    height: 35px;
+    width: 60%;
+}
+
+.barraBusca::placeholder {
+    color: var(--preto);
+}
+
+.searchBar button {
+    height: 35px;
+    width: 10%;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 0 8px;
+    border: solid 2px var(--selva);
+    background-color: var(--floresta);
+    color: var(--branco-puro);
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.searchBar button:hover {
+    background-color: var(--preto);
+    color: var(--terra);
+}
+
+/*-- Corpos do Conteúdo Principal:*/
+section {
+    background-color: var(--branco-queimado);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 25px 15px;
+}
+
+article {
+    background-color: var(--cha);
+    border-radius: 10px;
+    text-align: justify;
+    padding: 15px 20px;
+    margin: 20px 0;
+    box-shadow: 4px 4px 4px var(--cor-sombra);
+}
+
+/*-- Painel de Apresentação:*/
+.paissagem {
+    margin: 15px auto;
+    width: 70%;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5px;
+    position: relative;
+    transition: all 0.4s ease-in;
+}
+
+.paissagem:hover {
+    background-color: var(--cor-sombra);
+    opacity: 0.8;
+}
+
+.paissagem img {
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+}
+
+.paissagem p {
+    position: absolute;
+    bottom: 2%;
+    right: 3px;
+    color: var(--branco-puro);
+    background-color: var(--cor-sombra);
+    padding: 1rem 5px;
+    font-size: 1.3em;
+    margin: 0 2px;
+    width: 99%;
+}
+
+/*-- Conteúdo Principal:*/
+.sobre {    
+    margin: 20px;
+    text-align: justify;
+    height: 40vh;
+    color: var(--selva);
+}
+
+.sobre p {
+    font-size: 1.2em;
+}
+
+hr {
+    border-top: 2px solid var(--cafe);
+    margin-bottom: 20px;
+}
+
+/*-- Painéis dos Guias*/
+.container {
+    background: transparent;
+    color: var(--musgo);
+}
+
+.container article {
+    padding: 1rem 1.7rem;
+}
+
+.novidades {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 5px 5px 8px var(--cor-sombra-2);
+    color: var(--musgo);
+}
+
+.novidades:hover {
+    transform: scale(1.03);
+    padding: 10px 20px;
+}
+
+.flex-main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 22rem;
+}
+
+.banner {
+    width: 50%;
+    border: 3px solid purple; /*Remover*/
+}
+
+.banner a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner img {
+    width: 100%;
+    height: 90px; /*Remover*/
+}
+
+.mini-titulo {
+    background-color: var(--cor-sombra);
+    color: var(--branco);
+    font-style: italic;
+    padding: .5rem 7px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    border: 2px solid; /*Remover*/
+    width: 50%;
+}
+
+.flex-container a {
+    width: 48%;
+    border: 1px solid red; /*Remover*/
+    padding: 10px;
+    margin: 5px auto;
+}
+
+.banner:hover,
+.flex-container a:hover {
+    transform: scale(1.1);
+}
+
+/*-- Rodapé:*/
+footer {
+    background-color: var(--verde-escuro); /*Alterar a cor*/
+    color: var(--branco-puro);
+}
+
+.rodape-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1.5rem 3rem;
+    margin: 0;
+    background-color: var(--madeira);
+    border-radius: 0;
+}
+
+.rodape-container article {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.rodape-container article,
+address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rodape-titulo {
+    font-size: 21px;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.icones-redes {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.icones-redes li {
+    border: 2px solid var(--terra);
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+}
+
+.icones-redes a {
+    text-decoration: none;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icones-redes i {
+    width: 100%;
+    height: 100%;
+}
+
+.social-media .logotipo {
+    position: static;
+    width: 66px;
+    height: 66px;
+}
+
+.rodape-container ul {
+    list-style: none;
+    color: var(--terra);
+    font-weight: bold;
+}
+
+.rodape-container li {
+    padding: .3rem;
+    font-size: .8rem;
+}
+
+.rodape-container li:hover {
+    border-color: var(--floresta);
+}
+
+.rodape-container a {
+    text-decoration: none;
+    color: var(--terra);
+    transition: color 0.3s ease;
+}
+
+.rodape-container a:hover {
+    color: var(--floresta);
+}
+
+.copyright {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+
+/*------ Media Queries: -------------*/
+@media (max-width: 600px) {
+    .sobre p {
+        font-size: .8em;
+    }
+}
