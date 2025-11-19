@@ -1,0 +1,440 @@
+@import url(./main.css);
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 0.5fr 1fr auto auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+header { grid-area: 1 / 1 / 2 / 3; }
+.descricao { grid-area: 2 / 1 / 3 / 3; }
+nav { grid-area: 3 / 2 / 4 / 3; }
+main { grid-area: 3 / 1 / 4 / 2; }
+footer { grid-area: 4 / 1 / 5 / 3; }
+
+/*-- Cabeçalho:*/
+header {
+    background-color: var(--pinho);
+    width: 100%;
+    padding: 10px;
+    position: static;
+}
+
+.logotipo {
+    width: 88px;
+    height: 88px;
+    position: static;
+    margin: 10px auto; 
+    display: block;
+}
+
+.logotipo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 15px rgba(255, 254, 244, 0.4);
+}
+
+h1 {
+    color: var(--branco);
+    margin: 10px;
+    text-align: center;
+}
+
+/*-- Barra de Pesquisa:*/
+.searchBar {
+    margin: 15px 0;
+    background-color: transparent;
+}
+
+.searchBar form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barraBusca {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding: 0 8px;
+    margin-right: -5px;
+    border: 2px solid var(--cafe);
+    background-color: var(--cinza-claro);
+    height: 35px;
+    width: 40%;
+}
+
+.barraBusca::placeholder {
+    color: var(--preto);
+}
+
+.searchBar button {
+    height: 35px;
+    width: 15%;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 0 8px;
+    border: solid 2px var(--cafe);
+    background-color: var(--taupe);
+    color: var(--branco-puro);
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.searchBar button:hover {
+    background-color: var(--preto);
+    color: var(--terra);
+}
+
+/*-------- Container da Descrição do Conteúdo: -----*/
+.descricao {
+    background-color: transparent;
+    margin: 10px 1rem;
+    border-radius: 10px;
+    padding: 20px 2rem;
+    display: flex;
+    justify-content: center;
+    max-height: 80%;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.descricao .titulo,
+h2 {
+    color: var(--selva);
+    text-align: start;
+}
+
+.descricao .titulo {
+    background-color: var(--branco-queimado);
+    height: 100%;
+    width: 50%;
+    margin-left: -20px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: var(--terra);
+    letter-spacing: 1px;
+}
+
+.painel-fundo {
+    overflow: hidden;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+/*------ Barra de Navegação: ------*/
+nav {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    background-color: var(--areia);
+}
+
+aside {
+    border: 2px dashed;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    position: sticky;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar h3 {
+    color: var(--verde-escuro);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 19px;
+    border-bottom: 3px solid var(--cafe);
+    display: inline-block;
+    width: 85%;
+}
+
+.navbar-item {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--madeira);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.navbar-item img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 1px solid var(--musgo);
+}
+
+.navbar-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.navbar-item-info a {
+    text-decoration: none;
+    color: var(--branco-puro);
+}
+
+.navbar-item-info h6,
+.navbar-item-info h4 {
+    font-weight: normal;  
+    color: var(--branco-puro);
+}
+
+.navbar-item-info h4 {
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;  
+    width: 150px;  
+}
+
+/*-------- Conteúdo Principal: ----------*/
+main {
+    background-color: var(--branco-queimado);
+    padding: 40px;
+}
+
+.conteudo {
+    margin-bottom: 20px;
+}
+
+.conteudo .data-postagem {
+    font-size: 19px;
+    font-style: italic;
+    margin: 20px 0;
+    color: var(--musgo);
+}
+
+main article {
+    margin: 2rem 0;
+}
+
+main h3 {
+    font-size: 30px;
+}
+
+main p {
+    font-size: 1.25rem;
+    text-align: justify;
+    padding-top: 15px;
+    color: var(--preto);
+}
+
+main img {
+    display: block;
+    margin: 0 auto 0;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/*----- Seção de comentários: -----*/
+/*obs: Se quiser pode alterar para algo mais interessante*/
+.comentarios {
+    margin-top: 40px;
+    border-top: 2px solid var(--taupe);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comentario-form input {
+    min-width: 5rem;
+    width: 30%;
+    background: var(--areia);
+    border: none;
+    border-bottom: 2px solid var(--cafe);
+    border-right: 2px solid var(--cafe);
+    border-radius: 5px;
+    margin: 30px 0;
+    padding: 5px 10px;
+}
+
+.comentario-form input::placeholder,
+.comentario-form textarea::placeholder {
+    color: var(--cafe);
+}
+
+.comentario-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    resize: vertical;
+    border: none;
+    border-radius: 5px;
+    border-right: 2px solid var(--cafe);
+    border-bottom: 2px solid var(--cafe);
+    background-color: var(--areia);
+}
+
+.comentario-form button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: var(--jardim);
+    color: var(--preto);
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: large;  
+    width: 100px;
+}
+
+.lista-comentarios {
+    margin-top: 50px;
+    background-color: var(--off-white);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.comentario {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--cafe);
+    margin-bottom: 15px;
+}
+
+.comentario strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--musgo);
+}
+
+.comentario p {
+    color: var(--terra);
+}
+
+
+/*-- Rodapé:*/
+footer {
+    background-color: var(--verde-escuro); /*Alterar a cor*/
+    color: var(--branco-puro);
+}
+
+.rodape-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1.5rem 3rem;
+    margin: 0;
+    background-color: var(--madeira);
+    border-radius: 0;
+}
+
+.rodape-container article {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.rodape-container article,
+address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rodape-titulo {
+    font-size: 21px;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.icones-redes {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.icones-redes li {
+    border: 2px solid var(--terra);
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+}
+
+.icones-redes a {
+    text-decoration: none;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icones-redes i {
+    width: 100%;
+    height: 100%;
+}
+
+.social-media .logotipo {
+    position: static;
+    width: 66px;
+    height: 66px;
+    margin-bottom: 20px;
+}
+
+.rodape-container ul {
+    list-style: none;
+    color: var(--terra);
+    font-weight: bold;
+}
+
+.rodape-container li {
+    padding: .3rem;
+    font-size: .8rem;
+}
+
+.rodape-container li:hover {
+    border-color: var(--floresta);
+}
+
+.rodape-container a {
+    text-decoration: none;
+    color: var(--terra);
+    transition: color 0.3s ease;
+}
+
+.rodape-container a:hover {
+    color: var(--floresta);
+}
+
+.copyright {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+
+/*------- Media Queries for Desktop: -------*/
+@media (min-width: 790px) {
+
+}
