@@ -29,6 +29,10 @@ header a {
     align-items: center;
 }
 
+.logotipo img {
+    height: 66px;
+}
+
 /*---- Barra de Pesquisa: ----*/
 .searchBar {
     margin: 0 auto;
@@ -150,6 +154,13 @@ main {
     border-radius: 15px;
     box-shadow: 4px 4px 4px var(--cor-sombra);
     transition: transform 0.3s ease;
+    position: relative;
+}
+
+.ancora {
+    height: 300px;
+    width: 100%;
+    position: absolute;
 }
 
 .main-container:hover {

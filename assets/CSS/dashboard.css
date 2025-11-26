@@ -179,12 +179,15 @@ article {
 .sobre {    
     margin: 20px;
     text-align: justify;
-    height: 40vh;
+    min-height: 40vh;
     color: var(--selva);
+    width: 75%;
+    margin: 0 auto;
 }
 
 .sobre p {
     font-size: 1.2em;
+    line-height: 30px;
 }
 
 hr {
@@ -193,7 +196,6 @@ hr {
 }
 
 /*----- Painéis dos Guias: -------*/
-
 .container {
     background: transparent;
     color: var(--musgo);

@@ -16,7 +16,7 @@
     </span>
     <div class="grid-container">
         <header>
-            <a class="logotipo" href="../index.html">
+            <a class="logotipo" href="../index.php">
                 <img src="../assets/img/Logo-Brotaqui.png" alt="Logo do site"> <!--Logotipo-->
                 <h1>BROTAQUI!</h1>
             </a>
@@ -36,7 +36,7 @@
             <section class="navbar">
                 <h3>Menu de Opções</h3>
                 <div class="navbar-item">
-                    <a href="../index.html">
+                    <a href="../index.php">
                         <i class="fa-solid fa-house"></i>
                         <h4>Página Inicial</h4>
                     </a>
@@ -48,7 +48,7 @@
                     </a>
                 </div>
                 <div class="navbar-item">
-                    <a href="">
+                    <a href="./lista-manutencao.php">
                         <i class="fa-solid fa-screwdriver-wrench"></i>
                         <h4>Manutenção</h4>
                     </a>
@@ -63,57 +63,40 @@
         </nav>
 
         <main>
+            <h2>Guias: Área Externa</h2>
+            
             <section class="main-container">
-                <div class="thumbnail">
-                    <img src="../assets/img/horta.png" alt="Imagem do Tutorial">
-                </div>
+                <a href="guia.php?id=tomate" class="ancora"></a>
+                <div class="thumbnail"><img src="../assets/img/placeholder.jpeg" alt="Tomate"></div>
                 <div class="descricao">
-                    <h2>Título do Tutorial</h2>
-                    <h3>Autor | Última Atualização</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id dolores enim magnam quod blanditiis, aliquid incidunt! Quis dignissimos natus unde.</p>
+                    <h2>Tomate Cereja em Vasos</h2>
+                    <h3>Autor: Fabio | 22 Nov 2025</h3>
+                    <p>Tenha tomates frescos e doces cultivados na sua varanda ou quintal.</p>
+                    <a href="guia.php?id=tomate">Ler mais...</a>
                 </div>
             </section>
+
             <section class="main-container">
-                <div class="thumbnail">
-                    <img src="../assets/img/placeholder.jpeg" alt="Imagem do Tutorial">
-                </div>
+                <a href="guia.php?id=cenoura" class="ancora"></a>
+                <div class="thumbnail"><img src="../assets/img/placeholder.jpeg" alt="Cenoura"></div>
                 <div class="descricao">
-                    <h2>Título do Tutorial</h2>
-                    <h3>Autor | Última Atualização</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id dolores enim magnam quod blanditiis, aliquid incidunt! Quis dignissimos natus unde.</p>
+                    <h2>Cenouras: Como plantar</h2>
+                    <h3>Autor: Daniel | 21 Nov 2025</h3>
+                    <p>O segredo para cenouras grandes e saudáveis está na profundidade do solo.</p>
+                    <a href="guia.php?id=cenoura">Ler mais...</a>
                 </div>
             </section>
+
             <section class="main-container">
-                <div class="thumbnail">
-                    <img src="../assets/img/placeholder.jpeg" alt="Imagem do Tutorial">
-                </div>
+                <a href="guia.php?id=alface" class="ancora"></a>
+                <div class="thumbnail"><img src="../assets/img/placeholder.jpeg" alt="Alface"></div>
                 <div class="descricao">
-                    <h2>Título do Tutorial</h2>
-                    <h3>Autor | Última Atualização</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id dolores enim magnam quod blanditiis, aliquid incidunt! Quis dignissimos natus unde.</p>
+                    <h2>Alface Rápida e Crocante</h2>
+                    <h3>Autor: Fabio | 25 Nov 2025</h3>
+                    <p>A hortaliça mais rápida para colher. Veja o passo a passo.</p>
+                    <a href="guia.php?id=alface">Ler mais...</a>
                 </div>
             </section>
-            <section class="main-container">
-                <div class="thumbnail">
-                    <img src="../assets/img/placeholder.jpeg" alt="Imagem do Tutorial">
-                </div>
-                <div class="descricao">
-                    <h2>Título do Tutorial</h2>
-                    <h3>Autor | Última Atualização</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id dolores enim magnam quod blanditiis, aliquid incidunt! Quis dignissimos natus unde.</p>
-                </div>
-            </section>
-            <section class="main-container">
-                <div class="thumbnail">
-                    <img src="../assets/img/placeholder.jpeg" alt="Imagem do Tutorial">
-                </div>
-                <div class="descricao">
-                    <h2>Título do Tutorial</h2>
-                    <h3>Autor | Última Atualização</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id dolores enim magnam quod blanditiis, aliquid incidunt! Quis dignissimos natus unde.</p>
-                </div>
-            </section>
-            <br>
         </main>
 
         <footer>
@@ -145,7 +128,7 @@
                 <article class="rodape-links">
                     <p class="rodape-titulo">Links</p>
                     <ul>
-                        <li><a href="../index.html">Página inicial</a></li>
+                        <li><a href="../index.php">Página inicial</a></li>
                         <li><a href="">Guias de Cultivo</a></li>
                         <li><a href="">Guias de Venda</a></li>
                         <li><a href="">Termos de Uso</a></li>
