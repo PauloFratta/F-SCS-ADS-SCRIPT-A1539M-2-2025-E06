@@ -84,13 +84,17 @@ meu-projeto/
 │   │   ├── guias.css
 │   │   ├── main.css
 │   │   └── navegacao.css
-│   ├── /js/
-│   ├── /php/
-│   ├── /database/
 │   └── /img/
+├── /includes/
+│   ├── footer.php
+│   └── header.php
 ├── /pages/
-│   ├── termosDeUso.html
-│   ├── guias.html
-│   └── navegacao.html
+│   ├── guia.php
+│   ├── lista-externa.php
+│   ├── lista-interna.php
+│   ├── lista-manutencao.php
+│   ├── lista-problemas.php
+│   └── lista-tecnicas.php
+├── dados.php
 ├── README.md
 └── LICENSE
